@@ -37,6 +37,8 @@ angular.module('amChartsDirective', []).directive('amChart', ['$q', function ($q
             chart = o.theme ? new AmCharts.AmXYChart(AmCharts.themes[o.theme]) : new AmCharts.AmXYChart();
           } else if (o.type === 'pie') {
             chart = o.theme ? new AmCharts.AmPieChart(AmCharts.themes[o.theme]) : new AmCharts.AmPieChart();
+          } else if (o.type === 'gauge'){
+            chart = o.theme ? new AmCharts.makeChart(AmCharts.themes[o.theme]) : new AmCharts.makeChart();  
           } else {
             chart = o.theme ? new AmCharts.AmSerialChart(AmCharts.themes[o.theme]) : new AmCharts.AmSerialChart();
           }
