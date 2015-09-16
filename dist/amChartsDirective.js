@@ -62,7 +62,7 @@ angular.module('amChartsDirective', []).directive('amChart', ['$q', function ($q
 
               var chartKeys = Object.keys(o);
               for (var i = 0; i < chartKeys.length; i++) {
-                if (typeof o[chartKeys[i]] !== 'object' && typeof o[chartKeys[i]] !== 'function') {
+                if (typeof o[chartKeys[i]] !== 'function') {
                   chart[chartKeys[i]] = o[chartKeys[i]];
                 }
               }
